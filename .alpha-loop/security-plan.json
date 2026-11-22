@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "profiles": {
+    "application": {
+      "url": "https://github.com/mitre/cti",
+      "ref": "master",
+      "watch": [
+        "enterprise-attack/enterprise-attack.json"
+      ],
+      "acceptedSha": "e79c7c53d13c08cc21ba3ad77d4f8f49bf64ff07"
+    }
+  },
+  "checks": [
+    {
+      "source": "application",
+      "sourceUrl": "https://github.com/mitre/cti",
+      "techniqueId": "T1078",
+      "catalogRevision": "e79c7c53d13c08cc21ba3ad77d4f8f49bf64ff07",
+      "surface": "public-http",
+      "target": "application",
+      "command": "node scripts/oracle-checks.mjs accept-valid",
+      "passExit": 0,
+      "timeoutSec": 30,
+      "selected": true,
+      "milestone": "Security: T1078 (public-http)"
+    },
+    {
+      "source": "application",
+      "sourceUrl": "https://github.com/mitre/cti",
+      "techniqueId": "T1133",
+      "catalogRevision": "e79c7c53d13c08cc21ba3ad77d4f8f49bf64ff07",
+      "surface": "public-http",
+      "target": "application",
+      "command": "node scripts/oracle-checks.mjs reject-empty",
+      "passExit": 0,
+      "timeoutSec": 30,
+      "selected": true,
+      "milestone": "Security: T1133 (public-http)"
+    },
+    {
+      "source": "application",
+      "sourceUrl": "https://github.com/mitre/cti",
+      "techniqueId": "T1190",
+      "catalogRevision": "e79c7c53d13c08cc21ba3ad77d4f8f49bf64ff07",
+      "surface": "public-http",
+      "target": "application",
+      "command": "node scripts/oracle-checks.mjs health",
+      "passExit": 0,
+      "timeoutSec": 30,
+      "selected": true,
+      "milestone": "Security: T1190 (public-http)"
+    },
+    {
+      "source": "application",
+      "sourceUrl": "https://github.com/mitre/cti",
+      "techniqueId": "T1552",
+      "catalogRevision": "e79c7c53d13c08cc21ba3ad77d4f8f49bf64ff07",
+      "surface": "credentials-at-rest",
+      "target": "application",
+      "command": "node scripts/oracle-checks.mjs store-not-public",
+      "passExit": 0,
+      "timeoutSec": 30,
+      "selected": true,
+      "milestone": "Security: T1552 (credentials-at-rest)"
+    }
+  ]
+}
