@@ -2,7 +2,7 @@
 # The scan marks the agent profile NOT_APPLICABLE when no MCP server is configured.
 # Do not set security_profiles.agent.enabled: false.
 
-repo: owner/newsletter-signup-demo
+repo: soltrinox/newsletter-signup-demo
 agent: claude
 base_branch: main
 test_command: npm test
@@ -22,3 +22,23 @@ security_profiles:
     ref: main
     watch:
       - research/framework-model.yml
+
+# === Added by alpha-loop init (new settings) ===
+# These options were added in a newer alpha-loop release. They're commented out
+# so your current behavior is unchanged — uncomment to opt in.
+
+# label: ready                  # Issues with this label are queued for the loop
+
+# auto_merge: true            # Auto-merge PRs to session branch when checks pass
+
+# dev_command: npm run dev
+
+# max_session_duration: 7200    # Total session wall-clock budget, in seconds (2h)
+
+# automation_policy:
+#   block_labels: [do-not-automate, needs-human-input]
+
+# harnesses:
+#   - claude-code
+#
+
